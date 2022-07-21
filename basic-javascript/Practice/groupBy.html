@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>groupBy</title>
+  </head>
+  <body>
+    <script>
+      const myArray = [
+        {
+          name: "Vrushabh",
+          age: "20",
+          class: "A",
+          marks: 15,
+          attendance: 90,
+        },
+        {
+          name: "Kushal",
+          age: "21",
+          class: "A",
+          marks: 20,
+          attendance: 70,
+        },
+        {
+          name: "mitesh",
+          age: "21",
+          class: "A",
+          marks: 17,
+          attendance: 75,
+        },
+        {
+          name: "Mohit",
+          age: "22",
+          class: "B",
+          marks: 18,
+          attendance: 85,
+        },
+        {
+          name: "Mohit",
+          age: "22",
+          class: "B",
+          marks: 9,
+          attendance: 83,
+        },
+        {
+          name: "Mitesh",
+          age: "24",
+          class: "B",
+          marks: 11,
+          attendance: 87,
+        },
+      ];
+      const classVise = myArray.groupByToMap((e) => {
+        return e.class;
+      });
+      console.log(JSON.stringify(classVise), null, 2);
+    </script>
+  </body>
+</html>

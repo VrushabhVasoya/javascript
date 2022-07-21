@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map</title>
+  </head>
+  <body>
+    <script>
+      // function randint(range) {
+      //   return Math.floor(Math.random() * range);
+      // }
+
+      // function randomPath(sizeX, sizeY, startX, endX) {
+      //   let x = startX;
+      //   let path = [];
+      //   for (let y = sizeY - 1; y >= 0; y--) {
+      //     let upX = y ? randint(sizeX) : endX;
+      //     while (x != upX) {
+      //       path.push([x, y]);
+      //       if (x < upX) x++;
+      //       else x--;
+      //     }
+      //     path.push([x, y]);
+      //   }
+      //   // Remove U-turns
+      //   for (let i = path.length - 4; i >= 0; i--) {
+      //     if (
+      //       i + 3 < path.length &&
+      //       path[i][1] === path[i + 3][1] + 1 &&
+      //       path[i][0] === path[i + 3][0]
+      //     ) {
+      //       path.splice(i + 1, 2); // Remove U
+      //     }
+      //   }
+      //   return path;
+      // }
+
+      // function displayPath(sizeX, sizeY, path) {
+      //   let grid = Array.from({ length: sizeY }, () => Array(sizeX).fill("."));
+      //   for (let [x, y] of path) {
+      //     grid[y][x] = "X";
+      //   }
+      //   console.log(grid.map((row) => row.join(" ")).join("\n"));
+      // }
+      // let sizeX = 7,
+      //   sizeY = 7;
+      // let path = randomPath(sizeX, sizeY, 2, 4); // Start at X=2 at bottom, end at X=4 at top
+      // console.log(JSON.stringify(path));
+      // document.write(JSON.stringify(path));
+      // displayPath(sizeX, sizeY, path);
+    </script>
+  </body>
+</html>

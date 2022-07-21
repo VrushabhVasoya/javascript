@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function tableTemplate(data) {
+        return `
+      <table>
+        <thead>
+          <tr>${data.labels.map((label) => ` <th>${label}</th>`).join("")}
+          </tr>
+        </thead>
+        <tbody>${data.rows
+          .map(
+            (row) => ` <tr>
+              <td>${row.id}</td>
+              <td>${row.name}</td>
+            </tr>`
+          )
+          .join("")}
+        </tbody>
+      </table>`;
+      }
+
+      var data = {
+        labels: ["ID", "Name"],
+        rows: [
+          { id: 1, name: "richard" },
+          { id: 2, name: "santos" },
+          { id: 3, name: "<ömer & 'x'>" },
+        ],
+      };
+      document.write(tableTemplate(data));
+    </script>
+  </body>
+</html>

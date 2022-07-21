@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Api-post</title>
+    <style>
+      ul {
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        width: 25vw;
+
+      }
+
+      ul li {
+        padding: 1em 2em .8em 2em;
+        border: 1px solid black;
+
+      }
+
+    </style>
+    <script src="index.js"></script>
+  </head>
+
+  <body>
+    Username : <input type="text" placeholder="name" id="name" /> <br><br>
+    Job : <input type="job" placeholder="job" id="job" /></br></br>
+    <button onclick="myFunc()">Submit</button><br><br>
+    
+    <table id="table" border="1px ">
+      <thead>
+        <tr>
+          <td>Name</td>
+          <td >Job</td>
+          <td> Update</td>
+        </tr>
+      </thead>
+      <tbody id="tb">
+      
+      </tbody>
+    </table>
+
+  </body>
+
+</html>

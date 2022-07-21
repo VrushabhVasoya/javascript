@@ -1,0 +1,194 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+    <table
+      cellpadding="2"
+      cellspacing="2"
+      bgcolor="#dfdfdf"
+      width=400px"
+      align="center"
+    >
+      
+        <tr >
+          <th align="start">Name</th>
+          <th align="start">Age</th>
+          <th align="start">class</th>
+          <th align="start">marks</th>
+          <th align="start">attendance</th>
+        </tr>
+    
+      <tbody id="tableData"></tbody>
+    </table>
+  </head>
+  <body>
+    <script>
+      const myArray = [
+        {
+          name: "Vrushabh",
+          age: "20",
+          class: "A",
+          marks: 15,
+          attendance: 90,
+        },
+        {
+          name: "Kushal",
+          age: "21",
+          class: "A",
+          marks: 20,
+          attendance: 70,
+        },
+        {
+          name: "mitesh",
+          age: "21",
+          class: "A",
+          marks: 17,
+          attendance: 75,
+        },
+        {
+          name: "Mohit",
+          age: "22",
+          class: "B",
+          marks: 18,
+          attendance: 85,
+        },
+        {
+          name: "Mohit",
+          age: "22",
+          class: "B",
+          marks: 9,
+          attendance: 83,
+        },
+        {
+          name: "Mitesh",
+          age: "24",
+          class: "B",
+          marks: 11,
+          attendance: 87,
+        },
+      ];
+      myArray.sort(function (a, b) {
+      if (a.class < b.class) return -1;
+      if (a.class > b.class) return 1;
+      if (a.marks > b.marks) return -1;
+      if (a.marks < b.marks) return 1;
+      return 0;
+    });
+      let m2 = [];
+      let a2=[];
+      let at2=[];
+      let at4=[];
+      myArray.forEach(e=>{
+        if (e.class ==="A") { 
+         let m1 = e.marks;
+         let at1=e.attendance;
+         m2.push(m1);
+         at2.push(at1);  
+          }
+        else if(e.class==="B"){
+            let a1 = e.marks;
+            let att2=e.attendance;
+            a2.push(a1)
+            at4.push(att2)
+        }
+    })
+   
+    let m3 =Math.max(...m2)
+    let m4 =Math.min(...m2)
+    let at3=Math.max(...at2)
+    let at5=Math.min(...at2)
+
+    let c1 =Math.max(...a2)
+    let c2 =Math.min(...a2)
+    let c3=Math.max(...at4)
+    let c4=Math.min(...at4)
+
+    console.log("maxMarks 0f A :" + m3);
+    console.log("minMarks 0f A:" + m4);
+    console.log("maxAttendence 0f A :" + at3);
+    console.log("minAttendence 0f A:" + at5);
+
+    console.log("maxMarks 0f B :" + c1);
+    console.log("minMarks 0f B:" + c2);
+    console.log("maxAttendence 0f B :" + c3);
+    console.log("minAttendence 0f B:" + c4);
+      
+      var k = "<tbody>";
+      for (i = 0; i < myArray.length; i++) {
+        
+        k += "<tr>";
+        k += "<td>" + myArray[i].name + "</td>";
+        k += "<td>" + myArray[i].age + "</td>";
+        k += "<td>" + myArray[i].class + "</td>";
+        k += "<td>" + myArray[i].marks + "</td>";
+        k += "<td>" + myArray[i].attendance + "</td>";
+        k += "</tr>";
+      }
+      k += "</tbody>";
+      document.getElementById("tableData").innerHTML = k;
+      
+    </script>
+  </body>
+</html>  -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const studentDetails = [
+        {
+          name: "Anand",
+          science: 80,
+          maths: 70,
+        },
+        {
+          name: "Anoop",
+          science: 88,
+          maths: 90,
+        },
+        {
+          name: "Ram",
+          science: 90,
+          maths: 60,
+        },
+        {
+          name: "Sita",
+          science: 60,
+          maths: 90,
+        },
+        {
+          name: "Arjun",
+          science: 100,
+          maths: 80,
+        },
+      ];
+
+      function customComparator(a, b) {
+        var sumA = getTotalMarks(a);
+        var sumB = getTotalMarks(b);
+        if (sumA == sumB) {
+          return a.maths - b.maths;
+        } else {
+          return sumA - sumB;
+        }
+      }
+
+      function getTotalMarks(element) {
+        return element.science + element.maths;
+      }
+
+      var sortedArray = studentDetails.sort(customComparator);
+
+      console.log(JSON.stringify(sortedArray, null, 4));
+    </script>
+  </body>
+</html>  -->

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>trafficMap</title>
+  </head>
+  <body>
+    <script>
+      const isPossible = {
+        is0: [1, 3, 4],
+        is1: [0, 2, 3],
+        is2: [4, 5],
+        is3: [0, 2, 5],
+        is4: [1, 2, 5],
+        is5: [1, 2, 3],
+        isFirst: [0, 2],
+        isLast: [0, 4],
+        isSecond: [0, 5],
+        isSecondLast: [0, 3],
+      };
+      const isImPossible = {
+        v: [h, tr, br],
+        h: [0, 2, 3],
+        lb: [4, 5],
+        rb: [0, 2, 5],
+        tr: [1, 2, 5],
+        tl: [1, 2, 3],
+      };
+
+      let roadMap = [
+        [0, 2, 1],
+        [5, 4, 0],
+      ];
+
+      let isClearTraffic = true;
+      const vmapSize = roadMap.length; //2
+      const hmapSize = roadMap[0].length; //3
+      let i = 0,
+        j = 0,
+        a = 1,
+        b = 1;
+
+      const trafficMap = (directions) => {
+        if (!isPossible.isFirst.includes(directions[0][0])) {
+          return false;
+        }
+
+        if (
+          !isPossible.isLast.includes(directions[vmapSize - 1][hmapSize - 1])
+        ) {
+          return false;
+        }
+
+        while (i < vmapSize - 1 && j < hmapSize - 1) {
+          console.log(roadMap[i][j]);
+          let item = roadMap[i][j];
+          console.log(item);
+          switch (item) {
+            case 0:
+            case 3:
+            case 4:
+              j++;
+              break;
+            case 1:
+            case 2:
+            case 5:
+              i++;
+              break;
+          }
+          let nextItem = roadMap[i][j];
+          console.log(nextItem);
+          console.log(item);
+          if (!isPossible[`is${item}`].includes(nextItem)) {
+            return false;
+          }
+        }
+
+        return true;
+      };
+
+      console.log(trafficMap(roadMap));
+
+      roadMap = [
+        [1, 3, 0],
+        [0, 5, 2],
+      ];
+      console.log(trafficMap(roadMap));
+      roadMap = [
+        [0, 2, 1],
+        [5, 4, 2],
+      ];
+      console.log(trafficMap(roadMap));
+      roadMap = [[1], [2]];
+      console.log(trafficMap(roadMap));
+    </script>
+  </body>
+</html>

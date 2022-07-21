@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test</title>
+  </head>
+  <body>
+    <script>
+      //Write a function called lucky_sevens which takes an array of integers and returns true if any three consecutive elements sum to 7.
+      const lucky_sevan = (arr) => {
+        if (arr.length < 3) {
+          alert("enter the 3 integer");
+        }
+        for (let i = 2; i < arr.length; i++) {
+          if (arr[i] + arr[i - 1] + arr[i - 2] === 7) {
+            return true;
+          }
+        }
+        return false;
+      };
+      console.log(lucky_sevan([1, 2, 3, 2, 1]));
+
+      //sum of the integers after adding 1 to each using reduce.
+      const arr = [1, 2, 3]; //2,3,4=9
+      const newArr = arr.map((num) => num + 1);
+      const arrSum = newArr.reduce((a, b) => a + b);
+
+      //sum of the integers after adding 1 to each without reduce.
+      const total = () => {
+        const arr = [1, 2, 3]; //2,3,4=9
+        const newArr = arr.map((num) => num + 1);
+        let sum = 0;
+        for (let i = 0; i < newArr.length; i++) {
+          sum += newArr[i];
+        }
+        return sum;
+      };
+      console.log(total());
+
+      //string rotate
+      function rotate(str1, str2) {
+        return str1.length == str2.length && (str1 + str1).indexOf(str2) != -1;
+      }
+      var str1 = "BACD";
+      var str2 = "CDAB";
+
+      if (rotate(str1, str2))
+        document.write("Strings are rotations of each other");
+      else {
+        document.write("Strings are not rotations of each other");
+      }
+
+      //Remove space and separate capital and small latter's)
+      let str2 = "wEll come";
+      const capital = /[A-Z]/g;
+      const small = /[a-z]/g;
+      const found = str2.match(capital);
+      const found1 = str2.match(small);
+
+      console.log(found, found1);
+
+      //Remove space and separate capital and small latter's using loop)
+      let str1 = "welL come";
+      let str = str1.replace(/\s+/g, "");
+      const arr1 = [];
+      const arr2 = [];
+      for (let i = 0; i < str.length; i++) {
+        // str.charAt(i) !== "";
+        return;
+        if (str[i] === "") {
+        } else if (str[i] === str[i].toUpperCase()) {
+          arr1.push(str[i]);
+        } else if (str[i] === str[i].toLowerCase()) {
+          arr2.push(str[i]);
+        }
+      }
+      console.log(arr1, arr2);
+    </script>
+  </body>
+</html>

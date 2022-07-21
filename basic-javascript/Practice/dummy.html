@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // fetch(
+      //   "https://promos.makemytrip.com/notification/xhdpi//sbi-116x116-19082020.jpg"
+      // )
+      //   .then((response) => {
+      //     return response;
+      //   })
+      //   .then((data) => {
+      //     console.log(data);
+      //   });
+      fetch("https://reqres.in/api/users?page=2")
+        .then((res) => {
+          return res.json();
+        })
+        .then((d) => {
+          console.log(d);
+        });
+    </script>
+  </body>
+</html>
