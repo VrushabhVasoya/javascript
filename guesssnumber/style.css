@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  background-color: cornflowerblue;
+  position: relative;
+  height: 25vh;
+}
+main {
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.again {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.between {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-weight: bold;
+}
+
+.number {
+  background: #eee;
+  display: block;
+  width: 10rem;
+  padding: 7px 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  text-align: center;
+  text-justify: center;
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.left {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.right {
+  width: 50%;
+  font-size: 1.5rem;
+}
+
+.guess {
+  padding: 5px 10px;
+  width: 50%;
+  margin-bottom: 3rem;
+}
+
+h1 {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.message {
+  margin-bottom: 8rem;
+  height: 3rem;
+}
+
+.label-score {
+  margin-bottom: 2rem;
+}
